@@ -3,8 +3,20 @@ var tasksToDoEl=document.querySelector("#tasks-to-do");
 
 var taskFormHandler=function(event){
     event.preventDefault();
-    var taskNameInput=document.querySelector("input[name='task-name'").value;
+    var taskNameInput=document.querySelector("input[name='task-name']").value;
     var taskTypeInput = document.querySelector("select[name='task-type']").value;
+
+     // check if inputs are empty (validate)
+     if (taskNameInput === "" || taskTypeInput === "") {
+        alert("You need to fill out the task form!");
+        return false;
+        // if (taskNameInput === "" || taskTypeInput === "") {
+        //     alert("You need to fill out the task form!");
+        //     return false;
+        //   }
+      }
+      
+    // formEl.reset(); //receiving error not function so commenting out for now.
 
     // package up data as an object
   var taskDataObj = {
