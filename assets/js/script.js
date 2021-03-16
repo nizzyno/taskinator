@@ -45,7 +45,7 @@ listItemEl.appendChild(taskInfoEl);
 tasksToDoEl.appendChild(listItemEl);
 };
 
-formEl.addEventListener("click", taskFormHandler);
+formEl.addEventListener("click", taskFormHandler); // "submit" instead of "click" for enter key to work but it's breaking code now.
 
 /* var taskFormHandler = function(event) {
     event.preventDefault();
